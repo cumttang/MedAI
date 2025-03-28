@@ -1,5 +1,6 @@
 # MedAI
 
+```python {.line-numbers}
 from openai import OpenAI
 
 api_key = "xxxxxxxx"
@@ -15,3 +16,4 @@ client = OpenAI(
 completion = client.chat.completions.create(model=path, messages=[{'role': 'user', 'content': question}])
 response = json.loads(completion.model_dump_json())
 print(response['choices'][0]['message']['content'])
+```
